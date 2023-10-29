@@ -6,11 +6,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigator from './app/navigators/TabNavigator';
 import MovieDetailsScreen from "./app/screens/MovieDetailsScreen";
 import SeatBookingScreen from "./app/screens/SeatBookingScreen";
+import HomeScreen from "./app/screens/HomeScreen";
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  console.log("FirstApp is executed by Soham");
+  console.log("TopCorn is executed by Soham");
 
   return(
     <NavigationContainer>
@@ -23,6 +24,8 @@ const App = () => {
 
         <Stack.Screen name="SeatBooking" component={SeatBookingScreen}
         options={{animation: 'slide_from_bottom'}}/>
+
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

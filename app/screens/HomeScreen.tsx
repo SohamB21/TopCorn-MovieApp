@@ -79,7 +79,8 @@ const HomeScreen = ({navigation}: any) => {
   && (upcomingMoviesList==undefined || upcomingMoviesList==null)){
     return(
       <ScrollView style={styles.container} bounces={false} 
-        contentContainerStyle={styles.scrollViewContainer}>
+        contentContainerStyle={styles.scrollViewContainer} 
+        showsVerticalScrollIndicator={false}>
         <StatusBar hidden/>
 
         <View style={styles.InputHeaderContainer}>
@@ -94,7 +95,8 @@ const HomeScreen = ({navigation}: any) => {
   }
 
   return (
-    <ScrollView style={styles.container} bounces={false}>
+    <ScrollView style={styles.container} bounces={false} 
+      showsVerticalScrollIndicator={false}>
       <StatusBar hidden/>
       <View style={styles.InputHeaderContainer}>
           <InputHeader searchFunction={searchMoviesFunction}/>
@@ -168,7 +170,7 @@ const HomeScreen = ({navigation}: any) => {
       {/*Upcoming Movies Section*/}
       <CategoryHeader title={"Upcoming Movies"} 
         tagline={"Sneak a Peek: Be First in Line for Upcoming Movies!"}
-        iconName={"forward"}/>
+        iconName={"hourglass-half"}/>
       <FlatList 
         data={upcomingMoviesList} 
         keyExtractor={(item: any) => item.id} 

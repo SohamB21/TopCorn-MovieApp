@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'gold',
     borderRadius: 12,
     borderColor: 'firebrick',
-    borderWidth: 1,
+    borderWidth: 1.5,
   },
   titleIconContainer: {
     flexDirection: 'row',
